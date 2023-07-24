@@ -6,6 +6,13 @@ plugins {
     kotlin("multiplatform").version("1.8.21").apply(false)
 }
 
+buildscript {
+    dependencies {
+        classpath("com.squareup.sqldelight:gradle-plugin:1.5.5")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.42")
+    }
+}
+
 tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
 }
